@@ -1,0 +1,16 @@
+/* App-specific styles */
+
+/* Ensure terminal takes full height */
+#root {
+  min-height: 100vh;
+}
+
+/* Override default Vite styles */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00ff41;
+}
