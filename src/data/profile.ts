@@ -34,6 +34,8 @@ export const education: Education[] = [
 ];
 
 export const certifications: Certification[] = [
+    { name: 'Red Teaming for Generative AI', issuer: 'LinkedIn Learning', year: '2025' },
+    { name: 'AI in Cybersecurity: Red & Blue Teaming', issuer: 'LinkedIn Learning', year: '2025' },
     { name: 'AI for Engineers', issuer: 'Course Completion', year: '2024' },
     { name: 'Generative AI Mastermind Program', issuer: 'Outskills', year: '2024' },
     { name: 'Junior Cybersecurity Analyst Career Path', issuer: 'Cisco', year: '2024' },
