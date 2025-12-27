@@ -75,7 +75,7 @@ function App() {
           </span>
           <div className="flex items-center gap-6">
             <span className="text-cyber-greenDim">
-              © 2024 Amresh Kumar
+              © 2025 Amresh Kumar
             </span>
             <span className="text-cyber-gray">
               {currentDate.toLocaleDateString('en-US', {

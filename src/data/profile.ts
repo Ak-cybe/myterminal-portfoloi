@@ -68,6 +68,30 @@ export const skills: Skill[] = [
 
 export const projects: Project[] = [
     {
+        name: 'CVE-2025-68664-LangGrinch-PoC',
+        description: 'Proof-of-Concept for LangChain environment variable leak vulnerability. Demonstrates secrets_from_env bypass in langchain-core.',
+        tags: ['Python', 'CVE', 'LangChain', 'Security Research'],
+        permissions: 'drwxr-xr-x',
+        owner: 'root:amresh',
+        url: 'https://github.com/Ak-cybe/CVE-2025-68664-LangGrinch-PoC',
+    },
+    {
+        name: 'CVE-2025-68613-n8n-rce-analysis',
+        description: 'Security analysis and PoC for n8n workflow automation RCE vulnerability. Includes exploitation techniques and remediation.',
+        tags: ['Python', 'CVE', 'n8n', 'RCE', 'Security Research'],
+        permissions: 'drwxr-xr-x',
+        owner: 'root:amresh',
+        url: 'https://github.com/Ak-cybe/CVE-2025-68613-n8n-rce-analysis',
+    },
+    {
+        name: 'web-llm-attacks',
+        description: 'Comprehensive guide to Web LLM attacks including prompt injection, indirect prompt injection, and LLM exploitation techniques.',
+        tags: ['LLM', 'AI Security', 'Prompt Injection', 'OWASP'],
+        permissions: 'drwxr-xr-x',
+        owner: 'root:amresh',
+        url: 'https://github.com/Ak-cybe/web-llm-attacks',
+    },
+    {
         name: 'AWS-Security-Projects',
         description: 'Collection of AWS Security implementations including EC2 Security and IAM Custom Policies for granular access control.',
         tags: ['AWS', 'IAM', 'EC2', 'Cloud Security'],
@@ -76,34 +100,12 @@ export const projects: Project[] = [
         url: 'https://github.com/Ak-cybe/AWS-Security-Projects',
     },
     {
-        name: 'Wireshark Traffic Analyzer',
-        description: 'Automated Python script for real-time packet flagging and anomaly detection in network traffic.',
-        tags: ['Python', 'Scapy', 'Wireshark'],
-        permissions: 'rwx-r-x---',
-        owner: 'root:admin',
-    },
-    {
-        name: 'VulnScanner v1.0',
-        description: 'Custom vulnerability scanner designed to identify outdated software and potential entry points in local networks.',
-        tags: ['Python', 'Nmap', 'Sockets'],
-        permissions: 'rwx-r-x---',
-        owner: 'root:admin',
-    },
-    {
         name: 'Cyber Awareness Hub',
         description: 'Educational platform designed to teach non-tech users about phishing, hygiene, and digital safety.',
         tags: ['HTML', 'CSS', 'JavaScript'],
-        permissions: 'rwx-r-x---',
-        owner: 'root:admin',
-        url: "https://ak-cybe.github.io/cyber-awareness-hub/"
-    },
-    {
-        name: 'AI Phishing Link Scanner',
-        description: 'Intelligent phishing detection tool using Python and Machine Learning to scan and flag malicious URLs in real-time.',
-        tags: ['Python', 'Machine Learning', 'AI'],
-        permissions: 'rwx-r-x---',
-        owner: 'root:admin',
-        url: "https://github.com/Ak-cybe/AI-Phishing-Link-Scanner"
+        permissions: 'drwxr-xr-x',
+        owner: 'root:amresh',
+        url: 'https://ak-cybe.github.io/cyber-awareness-hub/',
     },
 ];
 

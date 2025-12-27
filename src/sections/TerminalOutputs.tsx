@@ -29,49 +29,125 @@ const HelpOutput: React.FC = () => (
     </motion.div>
 );
 
-// Whoami / About Output
-const WhoamiOutput: React.FC = () => (
+// Whoami / About Output - Short identity info like real 'whoami'
+const WhoamiOutput: React.FC = () => {
+    const systemInfo = `uid=1000(amresh) gid=1000(security) groups=1000(security),27(sudo),998(hackers)
+shell=/bin/bash
+home=/home/amresh`;
+
+    return (
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="mt-2"
+        >
+            <div className="border border-cyber-gray p-4 bg-cyber-dark max-w-xl">
+                <div className="text-cyber-blue mb-2 text-sm">$ whoami</div>
+                <div className="text-cyber-green text-glow text-xl font-bold mb-1">
+                    <TypeWriter text={profile.name} speed={40} showCursor={false} />
+                </div>
+                <div className="text-cyber-greenDim mb-3">
+                    <TypeWriter text={profile.title} speed={25} showCursor={false} />
+                </div>
+                <div className="text-cyber-gray text-xs whitespace-pre-line">
+                    <TypeWriter text={systemInfo} speed={15} showCursor={false} />
+                </div>
+                <div className="mt-3 pt-3 border-t border-cyber-gray text-sm">
+                    <span className="text-cyber-blue">Status:</span>
+                    <span className="text-cyber-green ml-2">● Active</span>
+                    <span className="text-cyber-gray ml-4">|</span>
+                    <span className="text-cyber-blue ml-4">Mode:</span>
+                    <span className="text-cyber-yellow ml-2">Offensive Security</span>
+                </div>
+            </div>
+            <div className="text-cyber-gray text-xs mt-2">
+                Tip: Run 'cat bio.txt' for detailed biography
+            </div>
+        </motion.div>
+    );
+};
+
+// Bio Output - Full detailed biography like reading a file
+const BioOutput: React.FC = () => (
     <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         className="mt-2"
     >
-        <div className="text-cyber-green text-glow text-2xl font-bold mb-2">
-            {profile.name}
-        </div>
-        <div className="text-cyber-blue mb-4">
-            {profile.title}
-        </div>
-        <div className="text-cyber-greenDim leading-relaxed whitespace-pre-line">
-            {profile.bio}
-        </div>
-    </motion.div>
-);
+        <div className="border border-cyber-gray p-4 bg-cyber-dark">
+            <div className="flex items-center justify-between mb-3 pb-2 border-b border-cyber-gray">
+                <div className="text-cyber-blue text-sm">$ cat bio.txt</div>
+                <div className="text-cyber-gray text-xs">-rw-r--r-- 1 amresh security 2.1K Dec 27 2025</div>
+            </div>
 
-// Bio Output
-const BioOutput: React.FC = () => (
-    <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        className="mt-2 border border-cyber-gray p-4"
-    >
-        <div className="text-cyber-blue mb-2">$ cat bio.txt</div>
-        <div className="text-cyber-greenDim leading-relaxed whitespace-pre-wrap">
-            <TypeWriter
-                text={profile.bio}
-                speed={15}
-                showCursor={false}
-            />
+            {/* ASCII Art Header */}
+            <pre className="text-cyber-green text-xs mb-4 hidden md:block">
+                {`
+    ╔══════════════════════════════════════════════════════════════════╗
+    ║                                                                  ║
+    ║     █████╗ ███╗   ███╗██████╗ ███████╗███████╗██╗  ██╗           ║
+    ║    ██╔══██╗████╗ ████║██╔══██╗██╔════╝██╔════╝██║  ██║           ║
+    ║    ███████║██╔████╔██║██████╔╝█████╗  ███████╗███████║           ║
+    ║    ██╔══██║██║╚██╔╝██║██╔══██╗██╔══╝  ╚════██║██╔══██║           ║
+    ║    ██║  ██║██║ ╚═╝ ██║██║  ██║███████╗███████║██║  ██║           ║
+    ║    ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝           ║
+    ║                                                                  ║
+    ║                    [ SECURITY RESEARCHER ]                       ║
+    ║                                                                  ║
+    ╚══════════════════════════════════════════════════════════════════╝
+`}
+            </pre>
+
+            <div className="text-cyber-green text-lg font-bold mb-2">
+                <TypeWriter text={profile.name} speed={35} showCursor={false} />
+            </div>
+            <div className="text-cyber-blue mb-4">
+                <TypeWriter text={profile.title} speed={20} showCursor={false} />
+            </div>
+
+            <div className="text-cyber-greenDim leading-relaxed whitespace-pre-wrap mb-4">
+                <TypeWriter
+                    text={profile.bio}
+                    speed={12}
+                    showCursor={false}
+                />
+            </div>
+
+            <div className="border-t border-cyber-gray pt-4 mt-4">
+                <div className="text-cyber-blue text-sm mb-2">// Quick Stats</div>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+                    <div>
+                        <span className="text-cyber-gray">Focus:</span>
+                        <span className="text-cyber-green ml-2">AI + Security</span>
+                    </div>
+                    <div>
+                        <span className="text-cyber-gray">Mode:</span>
+                        <span className="text-cyber-red ml-2">Red Team</span>
+                    </div>
+                    <div>
+                        <span className="text-cyber-gray">Status:</span>
+                        <span className="text-cyber-yellow ml-2">Learning</span>
+                    </div>
+                    <div>
+                        <span className="text-cyber-gray">CVEs:</span>
+                        <span className="text-cyber-green ml-2">2 Published</span>
+                    </div>
+                </div>
+            </div>
+
+            <div className="mt-4 pt-4 border-t border-cyber-gray text-sm">
+                <div className="flex items-center gap-4 mb-2">
+                    <Mail size={14} className="text-cyber-green" />
+                    <span className="text-cyber-greenDim">{profile.email}</span>
+                </div>
+                <div className="flex items-center gap-4">
+                    <MapPin size={14} className="text-cyber-green" />
+                    <span className="text-cyber-greenDim">{profile.location}</span>
+                </div>
+            </div>
         </div>
-        <div className="mt-4 text-cyber-gray text-sm border-t border-cyber-gray pt-2">
-            <div className="flex items-center gap-2 mb-1">
-                <Mail size={14} />
-                <span>{profile.email}</span>
-            </div>
-            <div className="flex items-center gap-2 mb-1">
-                <MapPin size={14} />
-                <span>{profile.location}</span>
-            </div>
+        <div className="text-cyber-gray text-xs mt-2">
+            EOF - bio.txt [69 lines]
         </div>
     </motion.div>
 );
