@@ -81,20 +81,19 @@ const BioOutput: React.FC = () => (
             </div>
 
             {/* ASCII Art Header */}
-            <pre className="text-cyber-green text-xs mb-4 hidden md:block">
+            <pre className="text-cyber-green text-xs mb-4 hidden md:block overflow-x-auto">
                 {`
-    ╔══════════════════════════════════════════════════════════════════╗
-    ║                                                                  ║
-    ║     █████╗ ███╗   ███╗██████╗ ███████╗███████╗██╗  ██╗           ║
-    ║    ██╔══██╗████╗ ████║██╔══██╗██╔════╝██╔════╝██║  ██║           ║
-    ║    ███████║██╔████╔██║██████╔╝█████╗  ███████╗███████║           ║
-    ║    ██╔══██║██║╚██╔╝██║██╔══██╗██╔══╝  ╚════██║██╔══██║           ║
-    ║    ██║  ██║██║ ╚═╝ ██║██║  ██║███████╗███████║██║  ██║           ║
-    ║    ╚═╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═╝           ║
-    ║                                                                  ║
-    ║                    [ SECURITY RESEARCHER ]                       ║
-    ║                                                                  ║
-    ╚══════════════════════════════════════════════════════════════════╝
+    ╔════════════════════════════════════════════════════════════════════╗
+    ║                                                                    ║
+    ║       _    __  __ ____  _____ ____  _   _                          ║
+    ║      / \\  |  \\/  |  _ \\| ____/ ___|| | | |                         ║
+    ║     / _ \\ | |\\/| | |_) |  _| \\___ \\| |_| |                         ║
+    ║    / ___ \\| |  | |  _ <| |___ ___) |  _  |                         ║
+    ║   /_/   \\_\\_|  |_|_| \\_\\_____|____/|_| |_|                         ║
+    ║                                                                    ║
+    ║                   [ SECURITY RESEARCHER ]                          ║
+    ║                                                                    ║
+    ╚════════════════════════════════════════════════════════════════════╝
 `}
             </pre>
 
@@ -445,8 +444,8 @@ const WelcomeOutput: React.FC = () => (
         animate={{ opacity: 1 }}
     >
         <div className="text-cyber-gray mb-2">&gt; initiating secure_connection...</div>
-        <div className="text-cyber-green text-glow text-4xl md:text-5xl font-bold mb-4">
-            HELLO, WORLD.
+        <div className="text-cyber-green/90 text-4xl md:text-5xl font-bold mb-4 tracking-wider">
+            ENTER THE HACKER WORLD!
         </div>
         <div className="text-cyber-blue text-lg md:text-xl mb-6">
             I am {profile.name}. {profile.title}.

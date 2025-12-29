@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react';
+import { Shield } from 'lucide-react';
 import CRTScreen from './components/CRTScreen';
 import TerminalWindow from './components/TerminalWindow';
 import Terminal from './components/Terminal';
 import MatrixRain from './components/MatrixRain';
 import GridOverlay from './components/GridOverlay';
+import Sidebar from './components/Sidebar';
+import profilePhoto from './assets/profile-photo.png';
 import './App.css';
 
 function App() {
@@ -31,16 +34,22 @@ function App() {
       <MatrixRain density={25} />
       <GridOverlay />
 
+      {/* Sidebar with ID Card */}
+      <Sidebar profilePhoto={profilePhoto} />
+
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-cyber-black/80 backdrop-blur border-b border-cyber-gray">
-        <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-          <div>
-            <h1 className="text-cyber-green text-lg font-bold text-glow">
-              Amresh Kumar
-            </h1>
-            <p className="text-cyber-greenDim text-xs">
-              Cyber Security Student
-            </p>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-cyber-black/80 backdrop-blur border-b border-cyber-gray transition-all duration-300">
+        <div className="w-full px-6 py-3 flex items-center justify-between">
+          <div className="flex items-center gap-3 transition-all duration-300">
+            <Shield className="w-8 h-8 text-cyber-green animate-pulse" />
+            <div>
+              <h1 className="text-cyber-green/80 text-lg font-bold tracking-wide uppercase shadow-none">
+                Amresh Kumar
+              </h1>
+              <p className="text-cyber-greenDim text-[10px] tracking-wider uppercase">
+                Cyber Security Student
+              </p>
+            </div>
           </div>
           <div className="flex items-center gap-4 text-xs">
             <span className="text-cyber-gray hidden md:inline">
@@ -61,14 +70,16 @@ function App() {
       </header>
 
       {/* Main Terminal */}
-      <main className="pt-20 pb-8">
-        <TerminalWindow title="amresh@portfolio:~/home">
-          <Terminal setTheme={setTheme} />
-        </TerminalWindow>
+      <main className="pt-20 pb-8 pl-12 md:pl-80 transition-all duration-300">
+        <div className="max-w-6xl mx-auto px-4">
+          <TerminalWindow title="amresh@portfolio:~/home">
+            <Terminal setTheme={setTheme} />
+          </TerminalWindow>
+        </div>
       </main>
 
       {/* Footer */}
-      <footer className="fixed bottom-0 left-0 right-0 z-50 bg-cyber-black/80 backdrop-blur border-t border-cyber-gray">
+      <footer className="fixed bottom-0 left-0 right-0 z-50 bg-cyber-black/80 backdrop-blur border-t border-cyber-gray pl-12 md:pl-80 transition-all duration-300">
         <div className="max-w-6xl mx-auto px-4 py-2 flex items-center justify-between text-xs">
           <span className="text-cyber-gray">
             amresh@portfolio:~$

@@ -329,3 +329,70 @@ input:focus {
   clip-path: inset(50% 0 30% 0);
   animation: glitch 2.5s infinite linear alternate-reverse;
 }
+
+/* ID Card Animations & Styles */
+@keyframes lanyard-swing {
+
+  0%,
+  100% {
+    transform: rotate(-1deg);
+  }
+
+  50% {
+    transform: rotate(1deg);
+  }
+}
+
+.lanyard-swing {
+  animation: lanyard-swing 3s ease-in-out infinite;
+  transform-origin: top center;
+}
+
+@keyframes photo-scan {
+  0% {
+    top: -10%;
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    top: 110%;
+    opacity: 0;
+  }
+}
+
+.animate-photo-scan {
+  animation: photo-scan 2s linear infinite;
+}
+
+.holographic {
+  background: linear-gradient(135deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.05) 25%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.05) 75%,
+      transparent 100%);
+  background-size: 200% 200%;
+  animation: holographic-shine 3s linear infinite;
+}
+
+@keyframes holographic-shine {
+  0% {
+    background-position: 200% 0%;
+  }
+
+  100% {
+    background-position: -200% 0%;
+  }
+}
+
+.neon-border {
+  box-shadow: 0 0 5px rgba(0, 255, 65, 0.2), inset 0 0 10px rgba(0, 255, 65, 0.1);
+}

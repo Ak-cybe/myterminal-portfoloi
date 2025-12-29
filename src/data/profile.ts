@@ -70,6 +70,14 @@ export const skills: Skill[] = [
 
 export const projects: Project[] = [
     {
+        name: 'SOC-Lateral-Movement-Detection',
+        description: 'Enterprise SIEM Correlation Rules: Brute Force → Lateral Movement → Privilege Abuse. Mapped to MITRE ATT&CK T1110 | T1021 | T1078.',
+        tags: ['SIEM', 'MITRE ATT&CK', 'SOC', 'Splunk'],
+        permissions: 'drwxr-xr-x',
+        owner: 'root:amresh',
+        url: 'https://github.com/Ak-cybe/SOC-Lateral-Movement-Detection-with-MITRE-ATT-CK-Mapping',
+    },
+    {
         name: 'CVE-2025-68664-LangGrinch-PoC',
         description: 'Proof-of-Concept for LangChain environment variable leak vulnerability. Demonstrates secrets_from_env bypass in langchain-core.',
         tags: ['Python', 'CVE', 'LangChain', 'Security Research'],
